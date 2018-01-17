@@ -7,7 +7,7 @@ export default class Movie extends React.Component {
     movie: null,
   };
 
-  componentDidMount(props) {
+  componentDidMount() {
     // change this line to grab the id passed on the URL
     const id = this.props.match.params.id;
     axios

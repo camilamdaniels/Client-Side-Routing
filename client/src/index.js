@@ -11,11 +11,11 @@ import Movie from './Movies/Movie'
 const history = createBrowserHistory();
 
 ReactDOM.render(
-  <div>
-  	Application running add your routing
-  	<BrowserRouter history={history}>
-  		<Route path="/" component={MovieList}/>
-  	</BrowserRouter>
-  </div>,
+  	<Router history={history}>
+  		<div>
+  			<Route path="/" component={MovieList} exact/>
+  			<Route path="/movies/:id" component={Movie}/>
+  		</div>
+  	</Router>,
   document.getElementById('root')
 );
